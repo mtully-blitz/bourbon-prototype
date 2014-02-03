@@ -1,0 +1,184 @@
+@import "bourbon/bourbon";
+@import "grid-settings";
+@import "neat/neat";
+
+@import "compass/reset";
+@import "compass/typography";
+
+body{
+    text-align: center;
+    line-height: 1.5em;
+    background: $margin-color;
+}
+
+// --- Fancy window margin styles ---
+#wrapper{
+    margin: $default-margin;
+}
+
+#border-top, #border-bottom {
+    width: 100%;
+    height: $default-margin;
+    background: $margin-color;
+    position: fixed;
+    top: 0;
+}
+#border-bottom {
+    bottom: 0;
+    top: auto;
+}
+
+// END --- Fancy window margin styles ---
+
+#wrapper{
+    background: #fff;
+}
+
+header{
+    background-color: $dark-bg;
+    @include pad(0.5em 1em);
+    text-align: center;
+    color: #ffffff;
+}
+
+h3{
+    display: block;
+    margin: 15px;
+}
+
+code{
+    display: block;
+    @include pad(.5em);
+}
+
+section{
+    @include outer-container;
+    background-color: $light-bg;
+    text-align: center;
+    margin-bottom: 40px; 
+    div{
+        background-color: $medium-bg;
+        margin-bottom: 20px;
+        code{
+            text-align: left;
+        }
+    }
+    aside, article{
+        background-color: $dark-bg;
+    }
+    
+}
+
+
+section.zero{
+    div{
+        @include span-columns(6);
+        padding: 2em;
+        
+        @include media($mobile){
+            @include span-columns(12);
+        }
+    }
+}
+
+section.first{
+    
+    #alpha{
+        @include span-columns(1);
+        @include media($mobile){
+            @include span-columns(12);
+        }
+    }
+    #beta{
+        @include span-columns(11);
+        @include omega();
+        @include media($mobile){
+            @include span-columns(12);
+        }
+    }
+    #gamma{
+        @include span-columns(2);
+        @include media($mobile){
+            @include span-columns(12);
+        }
+    }
+    #delta{
+        @include span-columns(10);
+        @include omega();
+        @include media($mobile){
+            @include span-columns(12);
+        }
+    }
+    #epsilon{
+        @include span-columns(3);
+        @include media($mobile){
+            @include span-columns(12);
+        }
+    }
+    #zeta{
+        @include span-columns(9);
+        @include omega();
+        @include media($mobile){
+            @include span-columns(12);
+        }
+    }
+    div#eta{
+        @include span-columns(4);
+        @include media($mobile){
+            @include span-columns(12);
+        }
+    }
+    div#theta{
+        @include span-columns(8);
+        @include omega();
+        @include media($mobile){
+            @include span-columns(12);
+        }
+    }
+    div#iota{
+        @include span-columns(5);
+        @include media($mobile){
+            @include span-columns(12);
+        }
+    }
+    div#kappa{
+        @include span-columns(7);
+        @include omega();
+        @include media($mobile){
+            @include span-columns(12);
+        }
+    }
+    div#lambda{
+        @include span-columns(6);
+        @include media($mobile){
+            @include span-columns(12);
+        }
+    }
+    div#mu{
+        @include span-columns(6);
+        @include omega();
+        @include media($mobile){
+            @include span-columns(12);
+        }
+    }
+    div{
+        height: 83px;
+    }
+}
+
+section.second{
+    div#alpha{
+        @include span-columns(4);
+    }
+    div#beta{
+        @include span-columns(8);
+        code{
+            text-align: center;
+        }
+        aside, article{
+            @include span-columns(4 of 8);
+            line-height: 3em;
+        }
+    }
+}
+

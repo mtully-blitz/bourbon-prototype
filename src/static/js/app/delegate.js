@@ -9,6 +9,7 @@ var keys = require('built/app/keys');
 
 var MySampleView        = require('app/sample/views').MySampleView;
 var MyModalView         = require('app/sample/views').MyModalView;
+var BodyBorderView      = require('app/sample/views').BodyBorderView;
 var Model               = require('backbone').Model;
 
 
@@ -35,7 +36,8 @@ var ApplicationDelegate = marionette.Controller.extend({
             message: 'Build something! Press Shift + M to display a Modal'
         });
 
-        this.app.window.show(new MySampleView({model: model}));
+        //this.app.window.show(new MySampleView({model: model}));
+        this.app.window.show(new BodyBorderView({border: .03}));
 
         /* ---------- */
     },
